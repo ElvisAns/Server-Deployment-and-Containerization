@@ -7,15 +7,19 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::519002666132:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-1DBHED9TMYRZZ
+      rolearn: arn:aws:iam::925538432867:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-NN467P5QXEPJ
       username: system:node:{{EC2PrivateDNSName}}
+    - groups:
       - system:masters
-      rolearn: arn:aws:iam::519002666132:role/UdacityFlaskDeployCBKubectlRole
+      rolearn: arn:aws:iam::925538432867:role/UdacityFlaskDeployCBKubectlRole
       username: build
+  mapUsers: |
+    []
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2022-05-11T11:16:26Z"
+  creationTimestamp: "2022-11-05T13:53:49Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "1631"
-  uid: 86402a4e-a9ff-4721-8c24-f0c4258f7440
+  resourceVersion: "1889"
+  selfLink: /api/v1/namespaces/kube-system/configmaps/aws-auth
+  uid: 763092d8-4f2f-483f-96e0-1c70e7872f29
